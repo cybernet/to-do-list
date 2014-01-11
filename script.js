@@ -1,8 +1,8 @@
 $(document).ready(function(){
 	var button = $("<button>Delete</button>");
-	var newItem = $("<li>Test</li>");
-	$("input[type='text']").change(function(){
-		$(".todoList").append(newItem);
+	/*var newItem = $("<li>Test</li>");*/
+	$("#customBox").on("change", function(){
+		$(".todoList").append("<li>" + this.value + "<button>Delete</button>" + "</li>");
 	});
 });
 
