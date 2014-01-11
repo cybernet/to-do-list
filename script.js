@@ -1,12 +1,13 @@
 $(document).ready(function(){
-	/*var button = $("<button>Delete</button>");*/
-	/*var newItem = $("<li>Test</li>");*/
-	$("#customBox").on("change", function(){
-		$(".todoList").append("<li>" + this.value + "<button>Delete</button>" + "</li>");
+	$("#addButton").click(function(event){
+		$(".todoList").append("<li>" + $("#customBox").val() + "<button>Delete</button>" + "</li>");
+		$("#customBox").val('');
 	});
-	$("#addButton").click(function(){
-		$(".todoList").append("<li>" + this.value + "<button>Delete</button>" + "</li>");
-	});
+	$("form").submit(function(event){
+		event.preventDefault();
+		$(".todoList").append("<li>" + $("#customBox").val() + "<button>Delete</button>" + "</li>");
+		$("#customBox").val('');
+	}); 
 });
 
 
@@ -28,5 +29,5 @@ When a user clicks on the deleteButton, the newItem closest to that deleteButton
 
 FIX ME
 
-Need to allow user to user enter key OR add button to add something to list*/
+textbox does not clear after entering*/
 
