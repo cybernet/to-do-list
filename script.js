@@ -1,10 +1,12 @@
 $(document).ready(function(){
 	$("form").submit(function(event){
 		event.preventDefault();
-		$(".todoList").append("<li>" + $("#customBox").val() + "<button>Delete</button>" + "<button>Edit</button>" + "<input type='checkbox'>" + "</li>");
+		var deleteButton = "<button class='delete'>Delete</button>";
+		var editButton = "<button class='edit'>Edit</button>";
+		$(".todoList").append("<li>" + $("#customBox").val() + deleteButton + editButton + "<input type='checkbox'>" + "</li>");
 		$("#customBox").val('');
-	}); 
-	$(".todoList").on("click", "button", function(){
+	});
+	$(".todoList").on("click", "button.delete", function(){
 		$(this).parent().remove();
 	});
 	$(".todoList").on("click", ":checkbox", function (){
@@ -20,6 +22,8 @@ $(document).ready(function(){
 /*
 
 #1 Add an edit button
+
+Specify different ids for delete and edit buttons.  Problem: need to differentiate between the two buttons.  using the variables doesn't work.
 
 #2 When user clicks eddit, the value of the list item becomes editable text.
 
