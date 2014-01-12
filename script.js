@@ -3,18 +3,18 @@ $(document).ready(function(){
 		event.preventDefault();
 		var deleteButton = "<button class='delete'>Delete</button>";
 		var editButton = "<button class='edit'>Edit</button>";
-		$(".todoList").append("<li>" + "<div>" + $("#customBox").val() + "</div>" + deleteButton + editButton + "<input type='checkbox'>" + "</li>");
+		$(".todoList").append("<li>" + "<div>" + $("#customBox").val() + deleteButton + editButton + "<input type='checkbox'>" + "</div>" + "</li>");
 		$("#customBox").val('');
 	});
 	$(".todoList").on("click", "button.delete", function(){
-		$(this).parent().remove();
+		$(this).parent().parent().remove();
 	});
 	$(".todoList").on("click", "button.edit", function (){
 		var editItemBox = "<form class='editInputBox'><input type='text' class='itembox'></form>";
 		$(this).parent().replaceWith(editItemBox);
 		$("form.editInputBox ").on("submit", function(){
 			event.preventDefault();
-			$(this).replaceWith("<li>" + "<div>" + $(".itembox").val() + "</div>" + "<button class='delete'>Delete</button>" + "<button class='edit'>Edit</button>" + "</li>");
+			$(this).replaceWith("<li>" + "<div>" + $(".itembox").val() + "<button class='delete'>Delete</button>" + "<button class='edit'>Edit</button>" +  "<input type='checkbox'>" + "</div>" + "</li>");
 		}); 
 	});
 	$(".todoList").on("click", ":checkbox", function (){
@@ -27,6 +27,7 @@ $(document).ready(function(){
 
 
 /*
+
 
 PSEUDO
 1. PRESSING ENTER ON THE BOX NEEDS TO replace the box wih its value
