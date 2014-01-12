@@ -9,6 +9,10 @@ $(document).ready(function(){
 	$(".todoList").on("click", "button.delete", function(){
 		$(this).parent().remove();
 	});
+	$(".todoList").on("click", "button.edit", function (){
+		var editItemBox = "<input type='text' class='itemBox'>";
+		$(this).parent().replaceWith("<form>" + editItemBox + "</form>");
+	});
 	$(".todoList").on("click", ":checkbox", function (){
 		$(this).parent().toggleClass("completedItem");
 	});
@@ -19,20 +23,5 @@ $(document).ready(function(){
 
 
 
-/*
 
-#1 Add an edit button
-
-Specify different ids for delete and edit buttons.  Problem: need to differentiate between the two buttons.  using the variables doesn't work.
-
-#2 When user clicks eddit, the value of the list item becomes editable text.
-
-#3 Hittin enter should turn the input into a regular li
-Prompt the user for the new value in a modal,
-or inline. Do not attempt to use the same textbox that is used to add todos for this functionality.
-Pre­populate the edit textbox with the original text.
-
-
-
-*/
 
