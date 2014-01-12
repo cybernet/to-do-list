@@ -1,11 +1,15 @@
 $(document).ready(function(){
 	$("form").submit(function(event){
 		event.preventDefault();
-		$(".todoList").append("<li>" + $("#customBox").val() + "<button>Delete</button>" + "</li>");
+		$(".todoList").append("<li>" + $("#customBox").val() + "<button>Delete</button>" +  "<input type='checkbox'>" + "</li>");
 		$("#customBox").val('');
 	}); 
-	$("button").click(function(event){
-		$(this).closest("li").remove();
+	$(".todoList").on("click", "button", function(){
+		$(this).parent().remove();
+	});
+	$(".todoList").on("click", ":checkbox", function (){
+		$(this).parent().toggleClass("completedItem");
+
 	});
 });
 
