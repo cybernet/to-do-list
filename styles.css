@@ -7,9 +7,6 @@
 .form-control {
   display: inline-block; }
 
-.add_button {
-  display: inline; }
-
 .completed_item {
   text-decoration: line-through; }
 
