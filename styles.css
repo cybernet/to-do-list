@@ -7,8 +7,8 @@
 .form-control {
   display: inline-block; }
 
-.custom_checkbox {
-  display: block; }
+.checkbox {
+  margin-top: 20px; }
 
 .completed_item {
   text-decoration: line-through; }

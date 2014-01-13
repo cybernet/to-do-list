@@ -4,7 +4,7 @@ $(document).ready(function(){
 		var deleteButton = "<button class='delete btn btn-default'>Delete</button>";
 		var editButton = "<button class='edit btn btn-default'>Edit</button>";
 		var twoButtons = "<div class='btn-group pull-right'>" + deleteButton + editButton + "</div>";
-		var checkBox = "<div class='checkbox'><label><input type='checkbox'></label></div>";
+		var checkBox = "<div class='checkbox'><label><input type='checkbox' class='pull-right'></label></div>";
 		$(".list_of_items").append("<li class='list-group-item'>" + "<div>" + $("#custom_textbox").val() + twoButtons + "</div>" + checkBox + "</li>");
 		$("#custom_textbox").val('');
 	});
