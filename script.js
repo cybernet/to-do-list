@@ -1,24 +1,26 @@
 $(document).ready(function(){
-	$("form#mainInputBox").submit(function(event){
+	$("form#main_input_box").submit(function(event){
 		event.preventDefault();
-		var deleteButton = "<button class='delete'>Delete</button>";
-		var editButton = "<button class='edit'>Edit</button>";
-		$(".todoList").append("<li>" + "<div>" + $("#customBox").val() + deleteButton + editButton + "<input type='checkbox'>" + "</div>" + "</li>");
-		$("#customBox").val('');
+		var deleteButton = "<button class='delete btn btn-default'>Delete</button>";
+		var editButton = "<button class='edit btn btn-default'>Edit</button>";
+		$(".list_of_items").append("<li>" + "<div>" + $("#custom_textbox").val() + deleteButton + editButton + "<input type='checkbox'>" + "</div>" + "</li>");
+		$("#custom_textbox").val('');
 	});
-	$(".todoList").on("click", "button.delete", function(){
+	$(".list_of_items").on("click", "button.delete", function(){
 		$(this).parent().parent().remove();
 	});
-	$(".todoList").on("click", "button.edit", function (){
-		var editItemBox = "<form class='editInputBox'><input type='text' class='itembox'></form>";
-		$(this).parent().replaceWith(editItemBox);
-		$("form.editInputBox ").on("submit", function(){
+	$(".list_of_items").on("click", "button.edit", function (){
+		var editItemBox = "<form class='edit_input_box'><input type='text' class='itembox'></form>";
+		var originalItem = $(this).parent().val();
+		$(this).parent().replaceWith(editItemBox); /* FIXME */
+		$(".itembox").val(originalItem.val);
+		$("form.edit_input_box ").on("submit", function(){
 			event.preventDefault();
-			$(this).replaceWith("<li>" + "<div>" + $(".itembox").val() + "<button class='delete'>Delete</button>" + "<button class='edit'>Edit</button>" +  "<input type='checkbox'>" + "</div>" + "</li>");
+			$(this).replaceWith("<div>" + $(".itembox").val() + "<button class='delete'>Delete</button>" + "<button class='edit'>Edit</button>" +  "<input type='checkbox'>" + "</div>");
 		}); 
 	});
-	$(".todoList").on("click", ":checkbox", function (){
-		$(this).parent().toggleClass("completedItem");
+	$(".list_of_items").on("click", ":checkbox", function (){
+		$(this).parent().toggleClass("completed_item");
 	});
 });
 
@@ -28,11 +30,8 @@ $(document).ready(function(){
 
 /*
 
+The code on line 15 does not work.  I am trying to get editItemBox to prepopulate with the text of its associated div.
 
-PSEUDO
-1. PRESSING ENTER ON THE BOX NEEDS TO replace the box wih its value
-2. editItemBox needs to grab the value of the list item
-going to define a variable for the value of the parent li
 */
 
 

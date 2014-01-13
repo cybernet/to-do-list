@@ -5,20 +5,24 @@
 	<script src="script.js"></script>
 	<link type="text/css" rel="stylesheet" href="styles.css"/>
 	<title>Ultimate To-Do List</title>
+	<!-- Bootstrap CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap JS -->
+    <script src="js/bootstrap.min.js"></script>
+	<!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">     
 </head>
 
 <body>
-	<h1>Ultimate To-Do List</h1>
-	<form id="mainInputBox">
-		<label>
-			What do you need to do? <input type="text" id="customBox" name="Item"><br>
-		</label>
-		<input type="submit" value="Add" id="addButton">
-	</form>
-	<ol class="todoList">
-		<li>Item 1<button type="button">Delete</button></li>
-		<li>Item 1<button type="button">Delete</button></li>
-		<li>Item 1<button type="button">Delete</button></li>
-	</ol>
+	<div class="container">
+		<h1>Ultimate To-Do List</h1>
+		<form id="main_input_box">
+			<label>
+				What do you need to do? <input type="text" id="custom_textbox" name="Item"><input type="submit" value="Add" id="add_button" class="btn btn-default">
+			</label>
+		</form>
+		<ol class="list_of_items">
+		</ol>
+	</div>
 </body>
 </html>

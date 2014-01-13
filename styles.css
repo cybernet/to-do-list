@@ -1,38 +1,19 @@
-
-#mainInputBox {
-
-}
-
-.editInputBox {
-
-}
-
-#customBox {
-	width: 200px;
-}
+#custom_textbox {
+  width: 200px; }
 
 .itemBox {
-	width: 200px;
+  width: 200px; }
 
-}
+.completed_item {
+  text-decoration: line-through; }
 
-#addButton {
+h1 {
+  display: inline-block; }
 
-}
+body {
+  background-color: #c8c9ca; }
 
-.delete {
-	
-}
-
-.edit {
-
-}
-
-.todoList {
-
-}
-
-.completedItem {
-	text-decoration: line-through;
-}
-
+.container {
+  background-color: #ffffff;
+  border-radius: 10px;
+  width: 50%; }
