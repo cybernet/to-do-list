@@ -13,7 +13,7 @@
 // -- Textbox Classes & IDs -- //
 
 #custom_textbox {
-        width: 200px;
+        width: 400px;
 }
 
 .itemBox {
@@ -21,11 +21,15 @@
 
 }
 
+.form-control {
+	display: inline-block;
+}
+
 
 // -- Button Classes & IDs -- //
 
-#add_button {
-
+.add_button {
+	display: inline;
 }
 
 .delete {
@@ -48,14 +52,17 @@
 
 h1 {
 	display: inline-block;
+	color: #292b33;
 }
 
 body {
-	background-color: #c8c9ca;
+	background-color: #f6f6f6;
 }
 
 .container {
+	margin-top: 50px;
 	background-color: #ffffff;
-	border-radius: 10px;
+	border-radius: 5px;
 	width: 50%;
+	border: 1px solid #545454;
 }

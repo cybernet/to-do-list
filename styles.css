@@ -1,19 +1,28 @@
 #custom_textbox {
-  width: 200px; }
+  width: 400px; }
 
 .itemBox {
   width: 200px; }
+
+.form-control {
+  display: inline-block; }
+
+.add_button {
+  display: inline; }
 
 .completed_item {
   text-decoration: line-through; }
 
 h1 {
-  display: inline-block; }
+  display: inline-block;
+  color: #292b33; }
 
 body {
-  background-color: #c8c9ca; }
+  background-color: #f6f6f6; }
 
 .container {
+  margin-top: 50px;
   background-color: #ffffff;
-  border-radius: 10px;
-  width: 50%; }
+  border-radius: 5px;
+  width: 50%;
+  border: 1px solid #545454; }

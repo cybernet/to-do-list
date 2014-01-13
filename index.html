@@ -16,13 +16,18 @@
 <body>
 	<div class="container">
 		<h1>Ultimate To-Do List</h1>
-		<form id="main_input_box">
+		<form role ="form" id="main_input_box">
 			<label>
-				What do you need to do? <input type="text" id="custom_textbox" name="Item"><input type="submit" value="Add" id="add_button" class="btn btn-default">
+				<div class="form-horizontal">
+					<input type="text" class ="form-control" id="custom_textbox" name="Item" placeholder="What do you need to do?">
+					<input type="submit" value="Add" class="btn btn-primary add_button">
+				</div>
 			</label>
 		</form>
-		<ol class="list_of_items">
+		<form>
+		<ol class="list-group list_of_items">
 		</ol>
+		</form>
 	</div>
 </body>
 </html>

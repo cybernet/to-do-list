@@ -3,7 +3,7 @@ $(document).ready(function(){
 		event.preventDefault();
 		var deleteButton = "<button class='delete btn btn-default'>Delete</button>";
 		var editButton = "<button class='edit btn btn-default'>Edit</button>";
-		$(".list_of_items").append("<li>" + "<div>" + $("#custom_textbox").val() + deleteButton + editButton + "<input type='checkbox'>" + "</div>" + "</li>");
+		$(".list_of_items").append("<li class='list-group-item'>" + "<div>" + $("#custom_textbox").val() + deleteButton + editButton + "<input type='checkbox'>" + "</div>" + "</li>");
 		$("#custom_textbox").val('');
 	});
 	$(".list_of_items").on("click", "button.delete", function(){
