@@ -1,11 +1,11 @@
 $(document).ready(function(){
 	$("form#main_input_box").submit(function(event){
 		event.preventDefault();
-		var deleteButton = "<button class='delete btn btn-default'>Delete</button>";
-		var editButton = "<button class='edit btn btn-default'>Edit</button>";
+		var deleteButton = "<button class='delete btn btn-warning'>Delete</button>";
+		var editButton = "<button class='edit btn btn-success'>Edit</button>";
 		var twoButtons = "<div class='btn-group pull-right'>" + deleteButton + editButton + "</div>";
 		var checkBox = "<div class='checkbox'><label><input type='checkbox' class='pull-right'></label></div>";
-		$(".list_of_items").append("<li class='list-group-item'>" + "<div>" + $("#custom_textbox").val() + twoButtons + "</div>" + checkBox + "</li>");
+		$(".list_of_items").append("<li class='list-group-item'>" + "<div class='text_holder'>" + $("#custom_textbox").val() + twoButtons + "</div>" + checkBox + "</li>");
 		$("#custom_textbox").val('');
 	});
 	$(".list_of_items").on("click", "button.delete", function(){
@@ -14,8 +14,8 @@ $(document).ready(function(){
 	$(".list_of_items").on("click", "button.edit", function (){
 		var editItemBox = "<form class='edit_input_box'><input type='text' class='itembox'></form>";
 		var originalItem = $(this).parent().val();
-		var deleteButton = "<button class='delete btn btn-default'>Delete</button>";
-		var editButton = "<button class='edit btn btn-default'>Edit</button>";
+		var deleteButton = "<button class='delete btn btn-warning'>Delete</button>";
+		var editButton = "<button class='edit btn btn-success'>Edit</button>";
 		var twoButtons = "<div class='btn-group pull-right'>" + deleteButton + editButton + "</div>";
 		$(this).parent().parent().replaceWith(editItemBox); 
 		$(".itembox").val(originalItem.val); /* FIXME */

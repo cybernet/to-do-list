@@ -1,11 +1,8 @@
-#custom_textbox {
-  width: 400px; }
-
-.itemBox {
-  width: 200px; }
-
 .form-control {
   display: inline-block; }
+
+.add_button {
+  margin: 10px 0px 10px 0px; }
 
 .checkbox {
   margin-top: 20px; }
@@ -20,7 +17,12 @@ h1 {
 body {
   background-color: #f6f6f6; }
 
-.container {
+.text_holder {
+  display: block;
+  max-width: 100%;
+  word-wrap: break-word; }
+
+#main {
   margin-top: 50px;
   background-color: #ffffff;
   border-radius: 5px;
